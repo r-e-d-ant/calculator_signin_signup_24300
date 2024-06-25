@@ -1,6 +1,6 @@
 ## Assignment #2: Implement the Simple Calculator and Design the App UI
 
-## 1. Created a tab-based navigation with multiple screens accessible through tabs. (SignIn, SignUp and Calculator) 
+## 1. Created a tab-based navigation with multiple screens accessible through tabs.<br>(SignIn, SignUp and Calculator) 
        ▻ Design tab icons and labels, and handle navigation between different tabs.
        ▻ Customize the appearance of active and inactive tabs.
 ## 2. Created a navigation drawer with a hamburger menu icon and a slide-out animation.
@@ -9,13 +9,14 @@
 
 ## 3. Screenshots
 ## Signup<br>
-![Screenshot 2024-06-24 225018](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/a023df2e-24a0-48b6-8ea3-8474ae1c249e)
+![Screenshot 2024-06-25 111451](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/c0b3e894-180f-40ad-9e67-fc0a94489d38)
 
 ## Login<br>
-![Screenshot 2024-06-24 225001](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/baa11584-1156-40fd-b817-601f7fc545c0)
+![Screenshot 2024-06-25 111429](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/cd67f32f-d38d-4149-84ac-3481d9a8f205)
 
 ## Calculator<br>
-![Screenshot 2024-06-24 225036](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/d935f8b4-6302-48ba-a1e1-17e7845092e8)
+![Screenshot 2024-06-25 111509](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/daea7a2a-d826-4d7f-81d2-5a0088301dec)
 
 ## navigation drawer<br>
-![Screenshot 2024-06-24 225102](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/a090db3e-22c2-4159-9e43-686173beccbf)
+![Screenshot 2024-06-25 111530](https://github.com/r-e-d-ant/calculator_signin_signup_24300/assets/66163130/f53abcef-d401-44fe-8ffa-4e209094898e)
+
