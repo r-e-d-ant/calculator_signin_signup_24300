@@ -3,85 +3,71 @@ import 'package:flutter/material.dart';
 class CalculatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: <Widget>[
-        Expanded(
-          child: Container(
-            alignment: Alignment.bottomRight,
-            padding: EdgeInsets.all(24),
-            child: Text(
-              '0',
-              style: TextStyle(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-        Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                buildButton("7"),
-                buildButton("8"),
-                buildButton("9"),
-                buildButton("/"),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                buildButton("4"),
-                buildButton("5"),
-                buildButton("6"),
-                buildButton("X"),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                buildButton("1"),
-                buildButton("2"),
-                buildButton("3"),
-                buildButton("-"),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                buildButton("."),
-                buildButton("0"),
-                buildButton("00"),
-                buildButton("+"),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                buildButton("CLEAR"),
-                buildButton("="),
-              ],
-            ),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            _buildDisplay(),
+            SizedBox(height: 10),
+            _buildButtonRow(['7', '8', '9', '/']),
+            SizedBox(height: 10),
+            _buildButtonRow(['4', '5', '6', '*']),
+            SizedBox(height: 10),
+            _buildButtonRow(['1', '2', '3', '-']),
+            SizedBox(height: 10),
+            _buildButtonRow(['0', '.', '=', '+']),
           ],
-        )
-      ],
+        ),
+      ),
     );
   }
 
-  Widget buildButton(String buttonText) {
+  Widget _buildDisplay() {
+    return Container(
+      alignment: Alignment.centerRight,
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 24),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 68, 65, 65),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Text(
+        '0',
+        style: TextStyle(color: Colors.white, fontSize: 48),
+      ),
+    );
+  }
+
+  Widget _buildButtonRow(List<String> buttons) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: buttons.map((button) {
+        bool isOperator = ['/', '*', '-', '+', '='].contains(button);
+        return _buildButton(button, isOperator);
+      }).toList(),
+    );
+  }
+
+  Widget _buildButton(String text, bool isOperator) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(4),
+        margin: EdgeInsets.all(4.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black, // Updated to `backgroundColor`
-            padding: EdgeInsets.all(24),
-            foregroundColor: Colors.white, // Updated to `foregroundColor`
+            padding: EdgeInsets.all(20.0),
+            backgroundColor: isOperator ? Colors.blue : Colors.white, // Updated from primary
+            foregroundColor: isOperator ? Colors.white : Colors.black, // Updated from onPrimary
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+              side: BorderSide(color: Colors.blue),
+            ),
           ),
           onPressed: () {},
           child: Text(
-            buttonText,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            text,
+            style: TextStyle(fontSize: 24),
           ),
         ),
       ),

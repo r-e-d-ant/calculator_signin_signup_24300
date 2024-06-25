@@ -26,15 +26,15 @@ class SignInScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue, // Updated to `backgroundColor`
+              backgroundColor: Colors.blue,
               padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-              foregroundColor: Colors.white, // Updated to `foregroundColor`
+              foregroundColor: Colors.white,
             ),
             child: Text('Sign In'),
           ),
           TextButton(
             onPressed: () {
-              // Navigate to the Sign Up screen
+              // go to on Sign Up screen
             },
             child: Text('Don\'t have an account? Sign Up'),
           ),

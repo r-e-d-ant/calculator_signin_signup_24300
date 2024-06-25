@@ -33,9 +33,9 @@ class SignUpScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue, // Updated to `backgroundColor`
+              backgroundColor: Colors.blue,
               padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-              foregroundColor: Colors.white, // Updated to `foregroundColor`
+              foregroundColor: Colors.white,
             ),
             child: Text('Sign Up'),
           ),
